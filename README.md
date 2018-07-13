@@ -72,4 +72,4 @@ Configure a webhook via your repository's settings page.
 1. Trigger the webhook with just the `push` event
 1. Make sure it's set to active :white_check_mark:
 
-You're all set :rocket:
+You're all set, pushes to your repository will now trigger an email to the address you specified :rocket:
