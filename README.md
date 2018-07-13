@@ -14,3 +14,4 @@
 ## Deploy
 
 1. Push the project: `clasp push`
+1. Deploy the project: `clasp deploy`
