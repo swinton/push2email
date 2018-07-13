@@ -2,5 +2,12 @@
   "timeZone": "America/New_York",
   "dependencies": {
   },
-  "exceptionLogging": "STACKDRIVER"
+  "exceptionLogging": "STACKDRIVER",
+  "webapp": {
+    "access": "ANYONE_ANONYMOUS",
+    "executeAs": "USER_DEPLOYING"
+  },
+  "executionApi": {
+    "access": "ANYONE"
+  }
 }

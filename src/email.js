@@ -50,6 +50,8 @@ function sendEmail(sender, addresses, payload) {
     //   }
     // })
   })
+
+  return body
 }
 
 function commitText(commit) {
