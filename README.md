@@ -6,13 +6,13 @@
 
 ## Installation
 
-1. [Setup](#)
-1. [Build](#)
-1. [Deploy](#)
-1. [Authorize](#)
-1. [Configure script properties](#)
-1. [Get your project's webhook URL](#)
-1. [Configure your repository to send `push` event to your project's webhook URL](#)
+1. [Setup](#setup)
+1. [Build](#build)
+1. [Deploy](#deploy)
+1. [Authorize](#authorize)
+1. [Configure script properties](#configure-script-properties)
+1. [Get your project's webhook URL](#get-your-projects-webhook-url)
+1. [Configure your repository to send `push` event to your project's webhook URL](#configure-your-repository-to-send-push-event-to-your-projects-webhook-url)
 
 ### Setup
 
