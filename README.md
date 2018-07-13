@@ -1,11 +1,11 @@
-# Clasp Example
-
-An example [Clasp](https://github.com/google/clasp) project, using Babel to transpile JavaScript.
+# push2email
 
 ## Setup
 
 1. Clone this repo
 1. Install dependencies `npm install`
+1. Install Clasp `npm i @google/clasp -g`, `clasp login`
+1. Create a Clasp project `clasp create push2email`
 
 ## Build
 
@@ -13,5 +13,4 @@ An example [Clasp](https://github.com/google/clasp) project, using Babel to tran
 
 ## Deploy
 
-1. Create a Clasp project: `clasp create example`
 1. Push the project: `clasp push`
