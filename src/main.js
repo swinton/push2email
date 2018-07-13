@@ -18,6 +18,14 @@ function doGet(e) {
   }
 
 function doPost(e) {
-    var params = JSON.stringify(e);
-    return ContentService.createTextOutput(params);
+    const scriptProperties = PropertiesService.getScriptProperties()
+    const recipient = scriptProperties.getProperty('RECIPIENT_EMAIL') || 'push2email@mailinator.com';
+
+    MailApp.sendEmail({
+        to: recipient,
+        subject: "[push2email] OHAI",
+        htmlBody: "'SUP"
+    })
+
+    return ContentService.createTextOutput(`Email sent to ${recipient}`);
 }

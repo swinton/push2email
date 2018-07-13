@@ -16,6 +16,19 @@
 1. Push the project: `clasp push`
 1. Deploy the project: `clasp deploy`
 
+## Authorize
+
+1. Open your project in your browser: `clasp open`
+1. ...
+
+## Configure script properties
+
+To specify an email address to which push event details will be delivered:
+
+1. Open your project in your browser: `clasp open`
+1. Navigate to `File` > `Project properties`, select the `Script properties` tab
+1. Add a new row, enter `RECIPIENT_EMAIL` as the property, and a valid email address as the value
+
 ## Get your project's webhook URL
 
 Once deployed, you can lookup the webhook URL for your project.
