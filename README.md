@@ -52,3 +52,14 @@ Where `${DEPLOYMENT_ID}` is the ID of a deployment of your project. To look up t
 ```
 
 So, in this instance, the deployment ID for version 1 (indicated by `@1` in the above output) is `AKfycbwOgu_KUrNGOKmyj7oCI2rsZemH9y9PMOcC5tomM_6iibfoUUJ2vM3wZC740X2IzBk`. The webhook URL for this deployment, therefore, is `https://script.google.com/macros/s/AKfycbx7mw535PmMPqUzXMPCI_0GQ5aLAZfDbqiNSiQAYEWbd2RXLj8LtMMlgu7XHUMnbDg/exec`.
+
+## Configure your repository's settings
+
+Configure a webhook via your repository's settings page.
+
+1. Payload URL is [your project's webhook URL](#get-your-projects-webhook-url)
+1. Content type is `application/json`
+1. Trigger the webhook with just the `push` event
+1. Make sure it's set to active :white_check_mark:
+
+You're all set :rocket:
