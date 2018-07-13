@@ -1,17 +1,4 @@
-// const strftime = require('strftime')
-// const nodemailer = require('nodemailer')
-// const sgTransport = require('nodemailer-sendgrid-transport')
-// const process = require('process')
-
-function sendEmail(sender, addresses, payload) {
-//   let options = {
-//     auth: {
-//       api_key: process.env.SENDGRID_APIKEY
-//     }
-//   }
-
-//  let client = nodemailer.createTransport(sgTransport(options))
-
+function sendEmail(payload, recipient) {
   let nameWithOwner = payload.repository.full_name
   let firstCommitSha = payload.commits[0].id.slice(0, 8)
   let firstCommitTitle = payload.commits[0].message
@@ -32,26 +19,13 @@ function sendEmail(sender, addresses, payload) {
   // Strip leading whitespaces from body
   body = body.replace(/^ {2}/gm, '')
 
-  addresses.forEach((address) => {
-    // Message object
-    let message = {
-      from: `${sender.name} <${sender.address}>`,
-      to: address,
-      subject: subject,
-      text: body,
-      html: `<pre>${body}</pre>`
-    }
-
-    // client.sendMail(message, (err, info) => {
-    //   if (err) {
-    //     console.log(`Error occurred: ${err.message}`)
-    //   } else {
-    //     console.log(`Message sent: ${info.response}`)
-    //   }
-    // })
+  // Send using MailApp class
+  // See: https://developers.google.com/apps-script/reference/mail/mail-app
+  return MailApp.sendEmail({
+    to: recipient,
+    subject: subject,
+    htmlBody: `<pre>${body}</pre>`
   })
-
-  return body
 }
 
 function commitText(commit) {

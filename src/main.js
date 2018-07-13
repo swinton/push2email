@@ -18,15 +18,11 @@ function doGet(e) {
   }
 
 function doPost(e) {
-    const body = e.postData.contents
+    const data = JSON.parse(e.postData.contents)
     const scriptProperties = PropertiesService.getScriptProperties()
     const recipient = scriptProperties.getProperty('RECIPIENT_EMAIL') || 'push2email@mailinator.com';
 
-    MailApp.sendEmail({
-        to: recipient,
-        subject: "[push2email] OHAI",
-        htmlBody: "'SUP"
-    })
+    sendEmail(data, recipient)
 
-    return ContentService.createTextOutput(`Email sent to ${recipient}\n\n${body}`);
+    return ContentService.createTextOutput(`Email sent to ${recipient}`);
 }
