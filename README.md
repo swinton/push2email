@@ -1,6 +1,6 @@
 # push2email
 
-> A self-hosted [Google Apps Script](https://developers.google.com/apps-script/) project that delivers [push event](https://developer.github.com/v3/activity/events/types/#pushevent) details to your inbox
+> A self-hosted [Google Apps Script](https://developers.google.com/apps-script/) project that delivers [push event](https://developer.github.com/v3/activity/events/types/#pushevent) details from GitHub to your inbox
 
 `push2email` may be used as a self-hosted replacement to the [email service](https://github.com/github/github-services/blob/f9e3a6b98d76d9964a6613d581164039b8d54d89/lib/services/email.rb) that is [due to be deprecated](https://developer.github.com/changes/2018-04-25-github-services-deprecation/) on January 31, 2019.
 
